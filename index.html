@@ -29,7 +29,7 @@
                 <a href="#cfp" class="hover:text-blue-600 transition-colors">Call for Papers</a>
                 <a href="#dates" class="hover:text-blue-600 transition-colors">Dates</a>
                 <a href="#organizers" class="hover:text-blue-600 transition-colors">Organizers</a>
-                <a href="#pc" class="hover:text-blue-600 transition-colors">Committee</a>
+                <!-- <a href="#pc" class="hover:text-blue-600 transition-colors">Committee</a> -->
                 <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
             </div>
         </div>
@@ -56,44 +56,46 @@
         <h2 class="text-3xl font-bold mb-12 text-center flex justify-center items-center gap-3">
             <i class="fa-solid fa-lightbulb text-blue-600"></i> Topics of Interest
         </h2>
+        <p class="text-lg text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed">
+            Topics of interest include but are not limited to the following...
+        </p>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
                 <h3 class="font-bold text-lg mb-3 text-blue-600">Analytics For Financial Data</h3>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Financial knowledge modeling:</strong> Money laundering trace, systemic risk, causal analysis.</li>
-                    <li>• <strong>Real-time Fraud Detection:</strong> Real-time subgraph matching in high-velocity streams.</li>
-                    <li>• <strong>Graph-RAG:</strong> Multi-hop logical reasoning over financial knowledge graphs.</li>
+                    <li>• <strong>Financial knowledge modeling:</strong> Modeling the evolving financial data to trace money laundering, model systemic risk, and perform causal analysis.</li>
+                    <li>• <strong>(Near) Real-time Fraud Detection:</strong> Problems such as real-time subgraph matching in high-velocity streams. Eg:- capturing sophisticated fraud-rings.</li>
+                    <li>• <strong>Graph-RAG:</strong> Addressing the core data management challenges of moving beyond simple vector retrieval to enable multi-hop logical reasoning over financial knowledge graphs.</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
                 <h3 class="font-bold text-lg mb-3 text-blue-600">Storage and Processing</h3>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Foundational Storage:</strong> Durability, encryption, and scalable cloud-based data lakes.</li>
-                    <li>• <strong>Optimized Processing:</strong> In-memory computation to handle workloads and keep latency in check.</li>
-                    <li>• <strong>Real-Time Handling:</strong> Anomaly detection for high-frequency trading platforms.</li>
+                    <li>• <strong>Foundational Storage:</strong> Efficient storage while ensuring durability, security & encryption, fast access, and the use of distributed file systems, cloud-based data lakes, and scalable database architectures.</li>
+                    <li>• <strong>Optimized Processing:</strong> Parallel processing, In-memory computation, optimized query engines to handle workloads and keep latency in check. Real-time Anomaly detection for streaming data.</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
                 <h3 class="font-bold text-lg mb-3 text-blue-600">Agent-based Economic Systems</h3>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Agentic AI Infrastructure:</strong> Management systems for millions of autonomous payment agents.</li>
-                    <li>• <strong>Algorithmic Governance:</strong> "Black box recorder" for regulatory audits and dispute resolution.</li>
-                    <li>• <strong>Dynamic Knowledge Graphs:</strong> Representing agent capabilities and beliefs in real-time.</li>
+                    <li>• <strong>Agentic AI Infrastructure:</strong> Scalable Management systems for millions of autonomous payment agents.</li>
+                    <li>• <strong>Algorithmic Governance:</strong> Designing data-centric systems for creating the "black box recorder" for financial AI, essential for dispute resolution, regulatory audits etc.</li>
+                    <li>• <strong>Dynamic Knowledge Graphs:</strong> Representing agent capabilities and beliefs in real-time, enable complex (near) real-time queries over evolving financial systems.</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
                 <h3 class="font-bold text-lg mb-3 text-blue-600">High-Performance Infrastructure</h3>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Hardware Co-design:</strong> Using FPGAs and TEEs for privacy-preserving computations.</li>
-                    <li>• <strong>Native Support:</strong> Architectures for multi-hop graph traversal in transactional workloads.</li>
-                    <li>• <strong>Latency Constraints:</strong> Complex feature engineering and model inference on massive streams.</li>
+                    <li>• <strong>Hardware Co-design:</strong> The co-design of data systems with FPGAs, Trusted Execution Environments (TEEs), and modern hardware to accelerate cryptographic workloads, privacy-preserving computations, and graph-based fraud detection etc.</li>
+                    <li>• <strong>Faster stream-processing:</strong> System architectures designed for complex feature engineering and model inference on massive transaction streams under extreme latency constraints.</li>
+                    <li>• <strong>Native Support:</strong> Architectures supporting real-time, multi-hop graph traversal and complex analytics within high-throughput transactional workloads.</li>
                 </ul>
             </div>
             <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm md:col-span-2">
                 <h3 class="font-bold text-lg mb-3 text-blue-600">Trustworthy and Privacy-preserving AI</h3>
                 <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Privacy-Preserving ML:</strong> Federated learning and analytics over sensitive encrypted financial data.</li>
-                    <li>• <strong>FL Lifecycle:</strong> novel infrastructure for communication optimization across legal jurisdictions.</li>
+                    <li>• <strong>Privacy-Preserving ML:</strong> Support for training and deploying models on sensitive financial data, including techniques such as  federated learning and efficient analytics over encrypted data.</li>
+                    <li>• <strong>Data Management for Federated Learning (FL):</strong> Infrastructure to manage the entire FL  lifecycle, addressing challenges such as secure and efficient data partitioning, ensuring statistical consistency, and optimizing communication costs across different legal and geographical jurisdictions.</li>
                 </ul>
             </div>
         </div>
@@ -182,7 +184,7 @@
         </div>
     </section>
 
-    <section id="accepted" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
+    <!-- <section id="accepted" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
         <h2 class="text-3xl font-bold mb-12 text-center">
             <i class="fa-solid fa-circle-check text-blue-600"></i> Accepted Papers
         </h2>
@@ -208,7 +210,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <section id="organizers" class="bg-white py-24 border-t border-slate-200 text-center">
         <div class="max-w-4xl mx-auto px-6">
@@ -253,21 +255,21 @@
                     <h4 class="font-bold text-md leading-tight">
                         <a href="https://www.linkedin.com/in/aakarshmalhotra/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Aakarsh Malhotra</a>
                     </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">AI Research Manager, Mastercard AI Garage</p>
+                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Director Data Science, Mastercard AI Garage</p>
                 </div>
                 
                 <div class="flex flex-col items-center">
                     <img src="415-5.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
                     <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/sahilm1992/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Sahil manchanda</a>
+                        <a href="https://www.linkedin.com/in/sahilm1992/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Sahil Manchanda</a>
                     </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">AI Research Manager, Mastercard AI Garage</p>
+                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Manager Data Science, Mastercard AI Garage</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="pc" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
+    <!-- <section id="pc" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
         <h2 class="text-3xl font-bold mb-12 text-center flex justify-center items-center gap-3">
             <i class="fa-solid fa-users-gear text-blue-600"></i> Program Committee
         </h2>
@@ -289,7 +291,7 @@
                 });
             </script>
         </div>
-    </section>
+    </section> -->
 
     <footer id="contact" class="bg-slate-900 text-slate-400 py-16">
         <div class="max-w-6xl mx-auto px-6">
@@ -321,3 +323,4 @@
 </body>
 
 </html>
+

@@ -13,6 +13,12 @@
         .mono { font-family: 'JetBrains Mono', monospace; }
         .glass { background: rgba(255, 255, 255, 0.8); backdrop-filter: blur(10px); }
         .gradient-text { background: linear-gradient(90deg, #0f172a, #334155); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+        
+        @media (max-width: 768px) {
+            .grid-schedule { grid-template-cols: 1fr !important; }
+            .grid-schedule > div:nth-child(1) { border-bottom: 1px dashed #e2e8f0; font-weight: bold; }
+            .grid-schedule > div:nth-child(3) { padding-top: 0.5rem; padding-bottom: 1.5rem; }
+        }
     </style>
 </head>
 <body class="bg-slate-50 text-slate-900">
@@ -28,6 +34,7 @@
                 <a href="#topics" class="hover:text-blue-600 transition-colors">Topics</a>
                 <a href="#cfp" class="hover:text-blue-600 transition-colors">Call for Papers</a>
                 <a href="#dates" class="hover:text-blue-600 transition-colors">Dates</a>
+                <a href="#schedule" class="hover:text-blue-600 transition-colors">Schedule</a>
                 <a href="#organizers" class="hover:text-blue-600 transition-colors">Organizers</a>
                 <a href="#pc" class="hover:text-blue-600 transition-colors">Committee</a>
                 <a href="#contact" class="hover:text-blue-600 transition-colors">Contact</a>
@@ -39,11 +46,11 @@
         <div class="inline-block px-4 py-1.5 mb-6 text-sm font-semibold tracking-wide text-blue-600 uppercase bg-blue-50 rounded-full">
             Co-located with SIGMOD/PODS 2026
         </div>
-        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 gradient-text leading-tight">
+        <h1 class="text-5xl md:text-6xl font-extrabold mb-6 gradient-text leading-tight tracking-tighter">
             FinDS: Workshop on Data Management for <br>the Modern Financial Systems
         </h1>
         <p class="text-lg text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed">
-            This workshop provides a dedicated venue for research that addresses the holistic challenge of building end-to-end financial data systems, where security, privacy, realtime performance, and data quality are deeply co-designed system properties.
+            Addressing the holistic challenge of building end-to-end financial data systems, where security, privacy, realtime performance, and data quality are deeply co-designed system properties.
         </p>
         <div class="flex flex-col md:flex-row justify-center items-center gap-4 text-slate-500 font-medium">
             <span><i class="fa-solid fa-calendar-days mr-2 text-blue-500"></i> May 31, 2026</span>
@@ -52,392 +59,308 @@
         </div>
     </header>
 
-    <section id="topics" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
-        <h2 class="text-3xl font-bold mb-12 text-center flex justify-center items-center gap-3">
-            <i class="fa-solid fa-lightbulb text-blue-600"></i> Topics of Interest
-        </h2>
-        <p class="text-lg text-slate-600 max-w-4xl mx-auto mb-8 leading-relaxed text-center">
-            Topics of interest include but are not limited to the following...
-        </p>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <h3 class="font-bold text-lg mb-3 text-blue-600">Analytics For Financial Data</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Financial knowledge modeling:</strong> Modeling the evolving financial data to trace money laundering, model systemic risk, and perform causal analysis.</li>
-                    <li>• <strong>(Near) Real-time Fraud Detection:</strong> Problems such as real-time subgraph matching in high-velocity streams. Eg:- capturing sophisticated fraud-rings.</li>
-                    <li>• <strong>Graph-RAG:</strong> Addressing the core data management challenges of moving beyond simple vector retrieval to enable multi-hop logical reasoning over financial knowledge graphs.</li>
-                </ul>
+    <!-- PROGRAM SCHEDULE -->
+    <section id="schedule" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
+        <div class="text-center mb-12">
+            <h2 class="text-4xl font-extrabold gradient-text mb-4 tracking-tighter">Tentative Program Schedule</h2>
+            <p class="text-slate-500 font-medium italic">Sunday, May 31, 2026 • Bengaluru, India</p>
+        </div>
+        
+        <div class="max-w-5xl mx-auto overflow-hidden rounded-2xl border border-slate-200 shadow-xl bg-white">
+            <!-- Table Header -->
+            <div class="hidden md:grid grid-cols-[120px_1fr_240px] bg-slate-900 text-white font-bold text-sm tracking-widest uppercase">
+                <div class="px-6 py-4">Time</div>
+                <div class="px-6 py-4">Title</div>
+                <div class="px-6 py-4 text-right"></div>
             </div>
-            <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <h3 class="font-bold text-lg mb-3 text-blue-600">Storage and Processing</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Foundational Storage:</strong> Efficient storage while ensuring durability, security & encryption, fast access, and the use of distributed file systems, cloud-based data lakes, and scalable database architectures.</li>
-                    <li>• <strong>Optimized Processing:</strong> Parallel processing, In-memory computation, optimized query engines to handle workloads and keep latency in check. Real-time Anomaly detection for streaming data.</li>
-                </ul>
+
+            <!-- Session 1 -->
+            <div class="bg-blue-50 border-y border-blue-100 px-6 py-3 text-blue-700 font-bold text-sm md:text-base uppercase tracking-widest">
+                09:00 – 10:20 — Session 1
             </div>
-            <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <h3 class="font-bold text-lg mb-3 text-blue-600">Agent-based Economic Systems</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Agentic AI Infrastructure:</strong> Scalable Management systems for millions of autonomous payment agents.</li>
-                    <li>• <strong>Algorithmic Governance:</strong> Designing data-centric systems for creating the "black box recorder" for financial AI, essential for dispute resolution, regulatory audits etc.</li>
-                    <li>• <strong>Dynamic Knowledge Graphs:</strong> Representing agent capabilities and beliefs in real-time, enable complex (near) real-time queries over evolving financial systems.</li>
-                </ul>
+
+            <div class="divide-y divide-slate-100">
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">09:00 AM</div>
+                    <div class="px-6 py-4 font-bold text-slate-900">Welcome Address</div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right font-medium italic leading-tight"></div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500">09:10 AM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">Bayesian Calibration of the Heston Model Across Physical and Risk-Neutral Measures</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right leading-tight">Ahmik Virani, Arkaprava Majumdar, Aaditya Bhashyam, P. K. Srijith</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500">09:25 AM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">Data Presentation Over Architecture: Resampling Strategies for Credit Risk Prediction with Tabular Foundation Models</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right leading-tight">Aditya Tanna, Mitul Solanki, Mohamed Bouadi, Nassim Bouarour, Pratinav Seth, Vinay kumar Sankarapu</div>
+                </div>
+
+                <!-- INVITED TALK 1 -->
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center bg-blue-600/5 border-l-4 border-blue-600 shadow-inner">
+                    <div class="px-6 py-8 mono text-sm text-blue-700 font-bold">09:40 AM</div>
+                    <div class="px-6 py-8">
+                        <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-1 rounded shadow-sm mr-2 uppercase tracking-tight">Invited Talk I</span>
+                        <h4 class="block mt-4 font-extrabold text-slate-900 text-xl leading-tight tracking-tight italic"></h4>
+                    </div>
+                    <div class="px-6 py-8 md:text-right">
+                        <a href="https://anupamsanghi.github.io/" target="_blank" class="text-lg font-extrabold text-blue-700 hover:underline transition-all block">Prof. Anupam Sanghi</a>
+                        <div class="text-xs text-blue-600/70 font-bold uppercase tracking-widest mt-1">IIT Hyderabad</div>
+                    </div>
+                </div>
             </div>
-            <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <h3 class="font-bold text-lg mb-3 text-blue-600">High-Performance Infrastructure</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Hardware Co-design:</strong> The co-design of data systems with FPGAs, Trusted Execution Environments (TEEs), and modern hardware to accelerate cryptographic workloads, privacy-preserving computations, and graph-based fraud detection etc.</li>
-                    <li>• <strong>Faster stream-processing:</strong> System architectures designed for complex feature engineering and model inference on massive transaction streams under extreme latency constraints.</li>
-                    <li>• <strong>Native Support:</strong> Architectures supporting real-time, multi-hop graph traversal and complex analytics within high-throughput transactional workloads.</li>
-                </ul>
+
+            <!-- Coffee Break -->
+            <div class="bg-slate-50 border-y border-slate-200 px-6 py-2 text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">
+                10:20 – 11:00 — <i class="fa-solid fa-mug-hot mx-2"></i> Coffee Break + Poster Session
             </div>
-            <div class="p-6 bg-white rounded-2xl border border-slate-100 shadow-sm md:col-span-2">
-                <h3 class="font-bold text-lg mb-3 text-blue-600">Trustworthy and Privacy-preserving AI</h3>
-                <ul class="text-sm text-slate-600 space-y-2">
-                    <li>• <strong>Privacy-Preserving ML:</strong> Support for training and deploying models on sensitive financial data, including techniques such as  federated learning and efficient analytics over encrypted data.</li>
-                    <li>• <strong>Data Management for Federated Learning (FL):</strong> Infrastructure to manage the entire FL  lifecycle, addressing challenges such as secure and efficient data partitioning, ensuring statistical consistency, and optimizing communication costs across different legal and geographical jurisdictions.</li>
-                </ul>
+
+            <!-- Session 2 Header -->
+            <div class="bg-blue-50 border-b border-blue-100 px-6 py-3 text-blue-700 font-bold text-sm md:text-base uppercase tracking-widest">
+                11:00 – 12:30 — Session 2
+            </div>
+
+            <div class="divide-y divide-slate-100">
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">11:00 AM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded mr-2 uppercase">Long</span>
+                        <span class="text-sm font-semibold text-slate-800">FedSTAR: Staleness-Aware Federated Stream Learning for Fraud Detection under Agent-Induced Distribution Shift</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right leading-tight">Kaustubh S. Bukkapatnam, Rayan Malik, Laksh Patel, Ian Wang, Venkataashish Gogineni</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500">11:20 AM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">AIFDR: The AI Flight Data Recorder — A Contract for Non-Blocking, Verifiable Algorithmic Governance</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right">Shreshta Shyamsundar, Anmol Jain</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500">11:35 AM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">Fed-SAuNF: Structure-Augmented Federated Graph Learning for Privacy-Sensitive Graphs</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right">Saurav Sudevan, Harsh Pal, Deepanshu, Adarsh Patankar, Deepak Yadav</div>
+                </div>
+
+
+            <div class="divide-y divide-slate-100">
+                <!-- INVITED TALK 3 -->
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center bg-blue-600/5 border-l-4 border-blue-600 shadow-inner">
+                    <div class="px-6 py-8 mono text-sm text-blue-700 font-bold">01:30 PM</div>
+                    <div class="px-6 py-8">
+                        <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-1 rounded shadow-sm mr-2 uppercase tracking-tight">Invited Talk III</span>
+                        <h4 class="block mt-4 font-extrabold text-slate-900 text-xl leading-tight tracking-tight italic">Compliant Data Processing Across Discovery, Sharing, and Querying</h4>
+                    </div>
+                    <div class="px-6 py-8 md:text-right">
+                        <a href="https://web.iitd.ac.in/~kbeedkar/" target="_blank" class="text-lg font-extrabold text-blue-700 hover:underline transition-all block">Prof. Kaustubh Beedkar</a>
+                        <div class="text-xs text-blue-600/70 font-bold uppercase tracking-widest mt-1">IIT Delhi</div>
+                    </div>
+                </div>
+
+            <!-- Lunch -->
+            <div class="bg-slate-50 border-y border-slate-200 px-6 py-2 text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">
+                12:30 – 13:30 — <i class="fa-solid fa-utensils mx-2"></i> Lunch
+            </div>
+
+            <!-- Session 3 Header -->
+            <div class="bg-blue-50 border-b border-blue-100 px-6 py-3 text-blue-700 font-bold text-sm md:text-base uppercase tracking-widest">
+                13:30 – 15:00 — Session 3
+            </div>
+
+                            <!-- INVITED TALK 2 -->
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center bg-blue-600/5 border-l-4 border-blue-600 shadow-inner">
+                    <div class="px-6 py-8 mono text-sm text-blue-700 font-bold">11:50 AM</div>
+                    <div class="px-6 py-8">
+                        <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-1 rounded shadow-sm mr-2 uppercase tracking-tight">Invited Talk II</span>
+                        <h4 class="block mt-4 font-extrabold text-slate-900 text-xl leading-tight tracking-tight italic">AI in Data Lakes</h4>
+                    </div>
+                    <div class="px-6 py-8 md:text-right">
+                        <a href="https://rihanhai.com/" target="_blank" class="text-lg font-extrabold text-blue-700 hover:underline transition-all block">Prof. Rihan Hai</a>
+                        <div class="text-xs text-blue-600/70 font-bold uppercase tracking-widest mt-1">TU Delft</div>
+                    </div>
+                </div>
+            </div>
+
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">02:10 PM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded mr-2 uppercase">Long</span>
+                        <span class="text-sm font-semibold text-slate-800">The Tin Inversion: When Feature Importance Depends on Forecast Horizon in Time Series Forecasting</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right">Muktinath Vishwakarma, Manish Kurhekar</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">02:30 PM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">FinOps over Heterogeneous Systems: Enabling Agentic Workflows via GraphQL</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right leading-tight">Ngoc Phuoc An Vo, Manish Kesarwani, Ruchi Mahindru, Chandrasekhar Narayanaswami</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">02:45 PM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="text-sm font-semibold text-slate-800">AI Vaccination for Financial Fraud: Bio-Inspired Self-Healing Defense for Payment Networks</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right italic">Sanket Krishna Pande</div>
+                </div>
+            </div>
+
+            <!-- Afternoon Break -->
+            <div class="bg-slate-50 border-y border-slate-200 px-6 py-2 text-center text-[10px] font-bold text-slate-400 uppercase tracking-[0.3em]">
+                15:00 – 15:30 — <i class="fa-solid fa-mug-hot mx-2"></i> Afternoon Break + Poster Session
+            </div>
+
+            <!-- Session 4 Header -->
+            <div class="bg-blue-50 border-b border-blue-100 px-6 py-3 text-blue-700 font-bold text-sm md:text-base uppercase tracking-widest">
+                15:30 – 17:00 — Session 4
+            </div>
+
+            <div class="divide-y divide-slate-100">
+                <!-- INVITED TALK 4 -->
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center bg-blue-600/5 border-l-4 border-blue-600 shadow-inner">
+                    <div class="px-6 py-8 mono text-sm text-blue-700 font-bold">15:30 PM</div>
+                    <div class="px-6 py-8">
+                        <span class="text-[10px] font-bold bg-blue-600 text-white px-2 py-1 rounded shadow-sm mr-2 uppercase tracking-tight">Invited Talk IV</span>
+                        <h4 class="block mt-4 font-extrabold text-slate-900 text-xl leading-tight tracking-tight italic"></h4>
+                    </div>
+                    <div class="px-6 py-8 md:text-right">
+                        <a href="https://www.linkedin.com/in/niyati-chhaya-9aaa25a/" target="_blank" class="text-lg font-extrabold text-blue-700 hover:underline transition-all block">Niyati Chhaya</a>
+                        <div class="text-xs text-blue-600/70 font-bold uppercase tracking-widest mt-1">Co-Founder, Hyperbots</div>
+                    </div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">16:10 PM</div>
+                    <div class="px-6 py-4">
+                        <span class="text-[9px] font-bold bg-blue-100 text-blue-600 px-1.5 py-0.5 rounded mr-2">LONG</span>
+                        <span class="text-sm font-semibold text-slate-800">Zero-Copy Semantic Contagion: In-Memory Streaming Architecture for Attention Graphs</span>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right italic">Kabir Murjani</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">16:30 PM</div>
+                    <div class="px-6 py-4 text-sm text-slate-800">
+                        <span class="text-[9px] font-bold bg-slate-100 text-slate-500 px-1.5 py-0.5 rounded mr-2 uppercase">Short</span>
+                        <span class="font-semibold">StreamRing: A Cascading Architecture for Real-Time Blockchain Fraud Detection</span>
+                        <div class="text-[9px] text-blue-500 font-bold mt-1 uppercase tracking-tighter"></div>
+                    </div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right leading-tight">Ahmad Zulfan, Ahmad Jibril Hemdi, Kyle Nathan Yahya</div>
+                </div>
+
+                <div class="grid md:grid-cols-[120px_1fr_240px] grid-schedule items-center hover:bg-slate-50 transition-colors">
+                    <div class="px-6 py-4 mono text-sm text-slate-500 font-semibold">16:45 PM</div>
+                    <div class="px-6 py-4 font-bold text-slate-900">Closing Remarks</div>
+                    <div class="px-6 py-4 text-[11px] text-slate-500 md:text-right font-medium italic"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="cfp" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200 text-center">
-        <h2 class="text-3xl font-bold mb-8">
-            <i class="fa-solid fa-file-lines text-blue-600"></i> Call for Papers
-        </h2>
-        <div class="bg-white p-8 rounded-3xl border border-slate-200 shadow-sm max-w-4xl mx-auto text-left">
-            <div class="grid md:grid-cols-2 gap-10">
-                <div>
-                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Submission Tracks</h4>
-                    <ul class="space-y-4 text-slate-700 text-justify">
-                        <li><strong>Full Research Papers (8 pages):</strong> For Mature, well developed, and rigorously evaluated research</li>
-                        <li><strong>Short/Vision Papers (4 pages):</strong> For early-stage results, novel system designs, or bold, provocative ideas.</li>
-                    </ul>
-<br>
-                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Submission Format</h4>
-                    <ul class="space-y-4 text-slate-700 text-justify">
-                        <li><strong>Template:</strong> Kindly adhere to the submission template guidlines found <a href="https://www.acm.org/publications/proceedings-template" class="text-blue-600 underline hover:text-blue-800" target="_blank">here</a>. <br>
-                        You can find the accepted Overleaf format <a href="https://www.overleaf.com/latex/templates/association-for-computing-machinery-acm-sig-proceedings-template/bmvfhcdnxfty" class="text-blue-600 underline hover:text-blue-800" target="_blank">here</a>.
-                        </li>
-                        <li><strong>Author names:</strong> You can use the following LaTeX command to compile your paper without author names: <br>
-                        <div class="bg-slate-50 p-3 rounded-lg border border-slate-200 mono text-[11px] mb-4">
-                        \documentclass[sigconf, anonymous, review]{acmart}
-                        </div>
-                        </li>
-                        <li>Submissions that do not follow these requirements will be desk-rejected.</li>
-                    </ul>
-                    
-
-                    
-                </div>
-                <div>
-                    
-                    <h4 class="font-bold mb-4 uppercase text-xs tracking-widest text-slate-400">Evaluation &amp; Presentation</h4>
-                    <br>
-                    <ul class="space-y-4 text-slate-700 text-justify">
-                        <li><strong>Evaluation:</strong> Reviewing will be double-anonymous, for which the submissions must be anonymized 
-                            by following the same anonymity requirements as for <a href="https://openreview.net/group?id=ACM.org/SIGMOD/2026/Workshop/FinDS" class="text-blue-600 underline hover:text-blue-800" target="_blank">regular track papers</a> 
-                            at the SIGMOD/PODS 2026 conference.</li>
-                            <br>
-                        <li>To provide maximum visibility and foster deep discussions, every accepted paper (both full and short) 
-                            will receive presentation opportunities: An oral presentation slot within a technical session. A spot in a dedicated 
-                            interactive poster session facilitating direct engagement 
-                            and in-depth conversations between authors and attendees.</li>
-                            <li>Accepted papers will be non-archival and posted on the workshop website.</li>
-                    </ul>
-                </div>
-            </div>
-            <a href="https://openreview.net/group?id=ACM.org/SIGMOD/2026/Workshop/FinDS" target="_blank" class="mt-8 block w-full text-center py-4 bg-blue-600 hover:bg-blue-700 text-white font-bold text-lg rounded-xl transition-all shadow-lg shadow-blue-200 tracking-tighter">
-                Submit via OpenReview
-            </a>
-        </div>
-    </section>
-
-    <section id="dates" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200 text-center">
-        <h2 class="text-3xl font-bold mb-12">
-            <i class="fa-solid fa-calendar-days text-blue-600"></i> Important Dates
-        </h2>
-        <div class="flex flex-col md:flex-row justify-center items-center gap-8 md:gap-0">
-            <div class="flex flex-col items-center md:w-1/4">
-                <div class="mono font-bold text-blue-600 text-sm mb-2">MAR 24, 2026 (AoE)</div>
-                <div class="w-5 h-5 rounded-full bg-blue-600 relative z-10 shadow-lg shadow-blue-200 border-4 border-blue-100"></div>
-                <div class="font-bold text-blue-600 mt-2">Paper Submission</div>
-            </div>
-            <div class="hidden md:block h-[2px] w-20 bg-slate-200 -mt-7"></div>
-            <div class="flex flex-col items-center md:w-1/4">
-                <div class="mono font-bold text-slate-400 text-sm mb-2">APR 20, 2026 (AoE)</div>
-                <div class="w-4 h-4 rounded-full bg-slate-300 relative z-10"></div>
-                <div class="font-semibold mt-2">Author Notification</div>
-            </div>
-            <div class="hidden md:block h-[2px] w-20 bg-slate-200 -mt-7"></div>
-            <div class="flex flex-col items-center md:w-1/4">
-                <div class="mono font-bold text-slate-400 text-sm mb-2">MAY 08, 2026</div>
-                <div class="w-4 h-4 rounded-full bg-slate-300 relative z-10"></div>
-                <div class="font-semibold mt-2">Camera Ready</div>
-            </div>
-            <div class="hidden md:block h-[2px] w-20 bg-blue-200 -mt-7"></div>
-            <div class="flex flex-col items-center md:w-1/4">
-                <div class="mono font-bold text-slate-400 text-sm mb-2">MAY 31, 2026</div>
-                <div class="w-4 h-4 rounded-full bg-slate-300 relative z-10"></div>
-                <div class="font-semibold mt-2">Workshop</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- <section id="accepted" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
-        <h2 class="text-3xl font-bold mb-12 text-center">
-            <i class="fa-solid fa-circle-check text-blue-600"></i> Accepted Papers
-        </h2>
-        <div class="max-w-4xl mx-auto space-y-4">
-            <div class="p-6 bg-white rounded-xl border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h4 class="font-bold text-lg text-slate-800">Title of an Accepted Research Paper Here</h4>
-                    <p class="text-slate-500 text-sm italic">Author Name, Author Name, Author Name</p>
-                </div>
-                <div class="flex gap-3">
-                    <span class="px-2 py-1 bg-blue-50 text-blue-600 text-[10px] font-bold uppercase rounded">Full Paper</span>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-sm">[PDF]</a>
-                </div>
-            </div>
-            <div class="p-6 bg-white rounded-xl border border-slate-100 flex flex-col md:flex-row md:items-center justify-between gap-4">
-                <div>
-                    <h4 class="font-bold text-lg text-slate-800">A Novel Vision for Scalable Payment Agent Governance</h4>
-                    <p class="text-slate-500 text-sm italic">Author Name, Author Name</p>
-                </div>
-                <div class="flex gap-3">
-                    <span class="px-2 py-1 bg-slate-100 text-slate-500 text-[10px] font-bold uppercase rounded">Vision Paper</span>
-                    <a href="#" class="text-blue-600 hover:text-blue-800 font-bold text-sm">[PDF]</a>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-   <section id="speakers" class="bg-white py-24 border-t border-slate-200 text-center">
+    <!-- INVITED SPEAKERS -->
+    <section id="speakers" class="bg-white py-24 border-t border-slate-200 text-center">
         <div class="max-w-6xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12">
-                <i class="fa-solid fa-brain text-blue-600"></i> Invited Talks
-            </h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-y-10 gap-x-6">
-                <!-- Kaustubh -->
+            <h2 class="text-3xl font-bold mb-12">Invited Speakers</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-y-10 gap-x-6">
                 <div class="flex flex-col items-center">
-                    <img src="415-7.jpg" alt="Kaustubh Beedkar" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://web.iitd.ac.in/~kbeedkar/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Kaustubh Beedkar</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Assistant Professor, IIT-Delhi</p>
+                    <a href="https://anupamsanghi.github.io/" target="_blank"><img src="anupam.jpeg" alt="Anupam" class="w-32 h-32 rounded-full mb-3 object-cover shadow-sm border-2 border-slate-100 hover:border-blue-500 transition-all"></a>
+                    <h4 class="font-bold text-sm text-slate-800">Anupam Sanghi</h4>
+                    <p class="text-blue-600 text-xs font-bold">IIT Hyderabad</p>
                 </div>
-
-                <!-- Niyati -->
                 <div class="flex flex-col items-center">
-                    <img src="Niyati.jpeg" alt="Niyati" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/niyati-chhaya-9aaa25a/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Niyati Chhaya</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Co-Founder Hyperbots</p>
+                    <a href="https://rihanhai.com/" target="_blank"><img src="Rihan_Hai.png" alt="Rihan" class="w-32 h-32 rounded-full mb-3 object-cover shadow-sm border-2 border-slate-100 hover:border-blue-500 transition-all"></a>
+                    <h4 class="font-bold text-sm text-slate-800">Rihan Hai</h4>
+                    <p class="text-blue-600 text-xs font-bold">TU Delft</p>
                 </div>
-
-                <!-- Rihan Hai -->
                 <div class="flex flex-col items-center">
-                    <img src="Rihan_Hai.png" alt="Rihan" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://rihanhai.com/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Rihan Hai</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Assistant Professor, TU Delft</p>
+                    <a href="https://web.iitd.ac.in/~kbeedkar/" target="_blank"><img src="415-7.jpg" alt="Kaustubh" class="w-32 h-32 rounded-full mb-3 object-cover shadow-sm border-2 border-slate-100 hover:border-blue-500 transition-all"></a>
+                    <h4 class="font-bold text-sm text-slate-800">Kaustubh Beedkar</h4>
+                    <p class="text-blue-600 text-xs font-bold">IIT Delhi</p>
                 </div>
-
-                <!-- Anupam -->
                 <div class="flex flex-col items-center">
-                    <img src="anupam.jpeg" alt="Prof. Anupam Sanghi, Assistant Professor, IIT Hyderabad" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://anupamsanghi.github.io/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Anupam Sanghi</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Assistant Professor, IIT Hyderabad</p>
+                    <a href="https://www.linkedin.com/in/niyati-chhaya-9aaa25a/" target="_blank"><img src="Niyati.jpeg" alt="Niyati" class="w-32 h-32 rounded-full mb-3 object-cover shadow-sm border-2 border-slate-100 hover:border-blue-500 transition-all"></a>
+                    <h4 class="font-bold text-sm text-slate-800">Niyati Chhaya</h4>
+                    <p class="text-blue-600 text-xs font-bold">Hyperbots</p>
                 </div>
             </div>
         </div>
     </section>
-    
-    <section id="organizers" class="bg-white py-24 border-t border-slate-200 text-center">
-        <div class="max-w-4xl mx-auto px-6">
-            <h2 class="text-3xl font-bold mb-12">
-                <i class="fa-solid fa-user-tie text-blue-600"></i> Workshop Organizers
-            </h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 gap-y-10 gap-x-6">
-                <div class="flex flex-col items-center">
-                    <img src="415.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/nitendra-rajput/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Nitendra Rajput</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Senior Vice President, Mastercard AI Garage</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <img src="415-1.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/dr-ankur-arora-75989915/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Ankur Arora</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Vice President, Mastercard AI Garage</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <img src="415-2.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/bedathur/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Prof. Srikanta Bedathur</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Professor, IIT-Delhi</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <img src="415-3.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/sayan-ranu-2990467/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Prof. Sayan Ranu</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Nick McKeown Chair Professor, IIT-Delhi</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <img src="415-4.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/aakarshmalhotra/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Aakarsh Malhotra</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Director Data Science, Mastercard AI Garage</p>
-                </div>
-                
-                <div class="flex flex-col items-center">
-                    <img src="415-5-2.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="https://www.linkedin.com/in/sahilm1992/" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Dr. Sahil Manchanda</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Manager Data Science, Mastercard AI Garage</p>
-                </div>
 
-                <div class="flex flex-col items-center"></div>
-                <div class="flex flex-col items-center">
-                    <img src="415-6.jpg" alt="organizer" class="w-36 h-36 rounded-full mb-3 border-2 border-slate-100 shadow-sm object-cover">
-                    <h4 class="font-bold text-md leading-tight">
-                        <a href="" target="_blank" class="text-slate-800 hover:text-blue-600 transition-colors">Raghavendra P</a>
-                    </h4>
-                    <p class="text-blue-600 text-[13px] font-bold tracking-tight">Web-chair & Data Scientist II, Mastercard AI Garage</p>
-                </div>
-                <div class="flex flex-col items-center"></div>
+    <!-- ORGANIZERS -->
+    <section id="organizers" class="max-w-6xl mx-auto px-6 py-24 border-t border-slate-200 text-center">
+        <h2 class="text-3xl font-bold mb-12">Workshop Organizers</h2>
+        <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-y-10 gap-x-4">
+            <div class="flex flex-col items-center">
+                <img src="415.jpg" alt="Nitendra" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Nitendra Rajput</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">Mastercard</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="415-1.jpg" alt="Ankur" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Dr. Ankur Arora</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">Mastercard</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="415-2.jpg" alt="Srikanta" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Prof. S. Bedathur</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">IIT Delhi</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="415-3.jpg" alt="Sayan" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Prof. Sayan Ranu</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">IIT Delhi</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="415-4.jpg" alt="Aakarsh" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Dr. A. Malhotra</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">Mastercard</p>
+            </div>
+            <div class="flex flex-col items-center">
+                <img src="415-5-2.jpg" alt="Sahil" class="w-24 h-24 rounded-full mb-3 object-cover grayscale hover:grayscale-0 transition-all border border-slate-200 shadow-sm">
+                <h4 class="font-bold text-[10px]">Dr. S. Manchanda</h4>
+                <p class="text-[9px] text-blue-500 font-bold uppercase">Mastercard</p>
             </div>
         </div>
     </section>
 
-    <!-- <section id="pc" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
-        <h2 class="text-3xl font-bold mb-12 text-center flex justify-center items-center gap-3">
-            <i class="fa-solid fa-users-gear text-blue-600"></i> Program Committee
-        </h2>
-        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
-            <script>
-                const pcNames = [
-                    "Dr. Alex Rivera", "Prof. Mei Ling", "James Wilson", "Dr. Fatima Aziz",
-                    "Robert Blake", "Sarah Connor", "John Doe", "Elena Rodriguez",
-                    "Amit Kumar", "Marcus Thorne", "Priya Das", "Victor Vance",
-                    "S. Datta", "Hans Zimmer", "Aris Jenkins", "Li Wei",
-                    "Sarah Miller", "Kevin Hart", "Oscar Isaac", "Laura Palmer"
-                ];
-                pcNames.forEach(name => {
-                    document.write(`
-                        <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm text-sm font-medium text-slate-700 hover:border-blue-200 transition-colors">
-                            ${name}
-                        </div>
-                    `);
-                });
-            </script>
-        </div>
-    </section> -->
-
-<section id="pc" class="max-w-6xl mx-auto px-6 py-20 border-t border-slate-200">
-        <h2 class="text-3xl font-bold mb-12 text-center flex justify-center items-center gap-3">
-            <i class="fa-solid fa-users-gear text-blue-600"></i> Program Committee
-        </h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            <!-- 1 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Mridula Verma</div>
-                <div class="text-xs text-slate-500 mt-1">Institute for Development and Research in Banking Technology</div>
-            </div>
-            <!-- 2 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Victor Lee</div>
-                <div class="text-xs text-slate-500 mt-1">TigerGraph</div>
-            </div>
-            <!-- 3 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Shikha Singh</div>
-                <div class="text-xs text-slate-500 mt-1">Mastercard India Pvt Ltd</div>
-            </div>
-            <!-- 4 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Sourav Dutta</div>
-                <div class="text-xs text-slate-500 mt-1">Huawei Research Center</div>
-            </div>
-            <!-- 5 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Hiroaki Shiokawa</div>
-                <div class="text-xs text-slate-500 mt-1">University of Tsukuba</div>
-            </div>
-            <!-- 6 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Vinayak Gupta</div>
-                <div class="text-xs text-slate-500 mt-1">Lawrence Livermore National Laboratory</div>
-            </div>
-            <!-- 7 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Amitabha Bagchi</div>
-                <div class="text-xs text-slate-500 mt-1">Indian Institute of Technology Delhi</div>
-            </div>
-            <!-- 8 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Sourav Medya</div>
-                <div class="text-xs text-slate-500 mt-1">University of Illinois at Chicago</div>
-            </div>
-            <!-- 9 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Pratinav Seth</div>
-                <div class="text-xs text-slate-500 mt-1">Lexsi.ai</div>
-            </div>
-            <!-- 10 -->
-            <div class="p-4 bg-white rounded-xl border border-slate-100 shadow-sm hover:border-blue-200 transition-colors">
-                <div class="font-bold text-slate-900 text-sm">Kaustubh Beedkar</div>
-                <div class="text-xs text-slate-500 mt-1">Indian Institute of Technology Delhi</div>
-            </div>
-        </div>
-    </section>
-
+    <!-- FOOTER -->
     <footer id="contact" class="bg-slate-900 text-slate-400 py-16">
         <div class="max-w-6xl mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-center gap-12 text-center md:text-left">
-                <div class="max-w-xs">
-                    <h2 class="text-2xl font-bold text-white mb-4">FinDS 2026</h2>
-                    <p class="text-sm leading-relaxed">Addressing the challenge of building trustworthy global financial ecosystems through co-designed data science.</p>
+            <div class="flex flex-col md:flex-row justify-between items-center gap-12">
+                <div class="max-w-xs text-center md:text-left">
+                    <h2 class="text-2xl font-bold text-white mb-2 tracking-tighter">FinDS 2026</h2>
+                    <p class="text-xs leading-relaxed">Building trustworthy global financial ecosystems through co-designed data science.</p>
                 </div>
-                <div class="space-y-4">
-                    <p class="text-white font-bold mb-4 uppercase text-xs tracking-widest">Contact</p>
-                    <p class="text-sm"><i class="fa-solid fa-envelope mr-3 text-blue-500"></i> finds-org@googlegroups.com</p>
+                <div class="text-center md:text-left">
+                    <p class="text-white font-bold mb-2 uppercase text-[10px] tracking-widest text-blue-500">Contact</p>
+                    <p class="text-sm"><i class="fa-solid fa-envelope mr-3"></i> finds-org@googlegroups.com</p>
                 </div>
-                <div class="flex flex-col items-center md:items-end space-y-4">
-                    <div class="flex items-center space-x-3">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-10">
-                        <span class="text-slate-500 text-lg font-bold">|</span>
-                        <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg" alt="IIT Delhi" class="h-10">
-                    </div>
-                    <p class="text-xs uppercase tracking-widest font-bold text-slate-600">SIGMOD/PODS 2026</p>
+                <div class="flex items-center space-x-6 opacity-60">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2a/Mastercard-logo.svg" alt="Mastercard" class="h-8">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/f/fd/Indian_Institute_of_Technology_Delhi_Logo.svg" alt="IIT Delhi" class="h-8">
                 </div>
-
-            <!-- </div>
-            <div class="pt-12 mt-12 border-t border-slate-800 text-center text-[10px] uppercase tracking-[0.2em] text-slate-600">
-                © 2026 FinDS Workshop Committee
-            </div> -->
+            </div>
         </div>
     </footer>
 
 </body>
-
 </html>
-
-
-
-
-
